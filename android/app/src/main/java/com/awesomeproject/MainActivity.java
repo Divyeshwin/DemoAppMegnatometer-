@@ -1,6 +1,8 @@
 package com.awesomeproject;
 
+import android.os.Bundle;
 import com.facebook.react.ReactActivity;
+import zendesk.support.guide.HelpCenterActivity;
 
 public class MainActivity extends ReactActivity {
 
@@ -9,7 +11,16 @@ public class MainActivity extends ReactActivity {
    * rendering of the component.
    */
   @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    HelpCenterActivity.builder().show(this);
+    super.onCreate(savedInstanceState);
+  }
+
+
+  @Override
   protected String getMainComponentName() {
     return "AwesomeProject";
   }
+
+
 }

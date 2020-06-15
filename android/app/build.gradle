@@ -187,7 +187,13 @@ android {
     }
 }
 
+repositories {
+    maven { url 'https://zendesk.jfrog.io/zendesk/repo' }
+}
+
 dependencies {
+    implementation group: 'com.zendesk', name: 'support', version: '3.0.2'
+
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDynamicVersion
     implementation "com.facebook.react:react-native:+"  // From node_modules

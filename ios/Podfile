@@ -79,6 +79,8 @@ target 'AwesomeProject' do
 
   pod 'RNFS', :path => '../node_modules/react-native-fs'
 
+  pod 'react-native-zendesk', :path => '../node_modules/react-native-zendesk'
+
   target 'AwesomeProjectTests' do
     inherit! :complete
     # Pods for testing
