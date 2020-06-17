@@ -7,14 +7,23 @@
  */
  
 import React, { useState } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text ,TouchableHighlight} from 'react-native';
 import { magnetometer } from 'react-native-sensors';
 var RNFS = require('react-native-fs');
-import RNFetchBlob from 'react-native-fetch-blob'
+import RNFetchBlob from 'react-native-fetch-blob';
+import {initialize,showHelpCenter} from 'react-native-zendesk';
+
 
  var path = RNFetchBlob.fs.dirs.DownloadDir + '/readings.txt';
 
 const App = () => {
+  config = {
+    appId: '98c604034c64584313b37d8da5583e0bc9e7a9c92038c14b',
+    clientId: 'mobile_sdk_client_21750addbfdf50fe8399',
+    zendeskUrl: 'https://winjit.zendesk.com'
+  }
+  
+  initialize(config);
   // const [value, setValue] = useState(0);
   // const [axisVal, setAxisValue] = useState("");
  
@@ -43,13 +52,22 @@ const App = () => {
 
   // });
   // subscription;
+
+  const onPress = () => {
+  showHelpCenter({hideContactSupport:true});
+// console.log('test21');  
+}
+  
+
  
   return (
     <View style={{ justifyContent: 'center', alignItems: 'center', margin: 10 }}>
  
-      <Text style={{ fontSize: 30, marginTop: 20 }}>{"microTesla: " + value}</Text>
-      <Text style={{ fontSize: 20, marginTop: 30 }}>{"Cordinate value:\n " + axisVal}</Text>
- 
+<TouchableHighlight        
+ onPress={onPress}
+>
+      <Text style={{ fontSize: 20, marginTop: 30 }}>{"HelpButton"}</Text>
+      </TouchableHighlight>
     </View>
   );
 };

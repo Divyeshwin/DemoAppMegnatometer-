@@ -55,13 +55,13 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
-      Zendesk.INSTANCE.init(this, "https://winjit.zendesk.com",
-              "98c604034c64584313b37d8da5583e0bc9e7a9c92038c14b", "mobile_sdk_client_21750addbfdf50fe8399");
-
-      Identity identity = new AnonymousIdentity();
-      Zendesk.INSTANCE.setIdentity(identity);
-
-      Support.INSTANCE.init(Zendesk.INSTANCE);
+//      Zendesk.INSTANCE.init(this, "https://winjit.zendesk.com",
+//              "98c604034c64584313b37d8da5583e0bc9e7a9c92038c14b", "mobile_sdk_client_21750addbfdf50fe8399");
+//
+//      Identity identity = new AnonymousIdentity();
+//      Zendesk.INSTANCE.setIdentity(identity);
+//
+//      Support.INSTANCE.init(Zendesk.INSTANCE);
 
   }
 
