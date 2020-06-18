@@ -193,6 +193,7 @@ repositories {
 
 dependencies {
     implementation group: 'com.zendesk', name: 'support', version: '3.0.2'
+    implementation project(':react-native-wifi-p2p')
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDynamicVersion
